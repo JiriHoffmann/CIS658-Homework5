@@ -18,7 +18,7 @@
   <tbody>
     <% @bugs.each do |bug| %>
       <tr>
-       <%# <td><%= "#{bug.user.fname} #{bug.user.lname}" %></td> %>
+       <td><%= "#{bug.user.fname} #{bug.user.lname}"%></td> 
         <td><%= bug.Title %></td>
         <td><%= bug.Description %></td>
         <td><%= bug.Issue_type %></td>
