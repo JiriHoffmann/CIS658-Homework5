@@ -1,4 +1,5 @@
 class Bug < ApplicationRecord
+  belongs_to :user, optional: false
   enum Issue_type: [ :issue, :enhancement, :feature]
   enum Priority: [:low, :medium, :high]
   enum Status: [ :open, :closed, :monitor]
