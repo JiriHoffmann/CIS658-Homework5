@@ -1,8 +1,5 @@
 class BugsController < ApplicationController
   before_action :set_bug, only: [:show, :edit, :update, :destroy]
-  before_action :set_issue_types
-  before_action :set_priorities
-  before_action :set_statuses
 
   # GET /bugs
   # GET /bugs.json
@@ -72,18 +69,7 @@ class BugsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def bug_params
-      params.require(:bug).permit(:Title, :Description, :Issue_type, :Priority, :Status)
+      params.require(:bug).permit(:title, :description, :issue_type, :priority, :status, :user_id)
     end
 
-    def set_issue_types
-      @issues = Bug.Issue_types
-    end
-
-    def set_priorities
-      @priorities = Bug.Priorities
-    end
-
-    def set_statuses
-      @statuses = Bug.Statuses
-    end    
 end

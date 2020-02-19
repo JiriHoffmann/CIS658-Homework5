@@ -10,16 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_15_211419) do
+ActiveRecord::Schema.define(version: 2020_02_19_160435) do
 
   create_table "bugs", force: :cascade do |t|
-    t.string "Title"
-    t.text "Description"
-    t.integer "Issue_type"
-    t.integer "Priority"
-    t.integer "Status"
+    t.string "title"
+    t.text "description"
+    t.integer "issue_type", default: 2
+    t.integer "priority", default: 1
+    t.integer "status", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_bugs_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -31,4 +33,5 @@ ActiveRecord::Schema.define(version: 2020_02_15_211419) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "bugs", "users"
 end

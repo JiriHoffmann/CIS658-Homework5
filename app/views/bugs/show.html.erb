@@ -1,28 +1,34 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>User:</strong>
+  <%= "#{@bug.user.fname} #{@bug.user.lname}" %></
+</p>
+
+
+<p>
   <strong>Title:</strong>
-  <%= @bug.Title %>
+  <%= @bug.title %>
 </p>
 
 <p>
   <strong>Description:</strong>
-  <%= @bug.Description %>
+  <%= @bug.description %>
 </p>
 
 <p>
   <strong>Issue type:</strong>
-  <%= @bug.Issue_type %>
+  <%= @bug.issue_type %>
 </p>
 
 <p>
   <strong>Priority:</strong>
-  <%= @bug.Priority %>
+  <%= @bug.priority %>
 </p>
 
 <p>
   <strong>Status:</strong>
-  <%= @bug.Status %>
+  <%= @bug.status %>
 </p>
 
 <%= link_to 'Edit', edit_bug_path(@bug) %> |

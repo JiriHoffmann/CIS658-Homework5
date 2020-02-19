@@ -14,11 +14,11 @@ class BugsTest < ApplicationSystemTestCase
     visit bugs_url
     click_on "New Bug"
 
-    fill_in "Description", with: @bug.Description
-    fill_in "Issue type", with: @bug.Issue_type
-    fill_in "Priority", with: @bug.Priority
-    fill_in "Status", with: @bug.Status
-    fill_in "Title", with: @bug.Title
+    fill_in "Description", with: @bug.description
+    fill_in "Issue type", with: @bug.issue_type
+    fill_in "Priority", with: @bug.priority
+    fill_in "Status", with: @bug.status
+    fill_in "Title", with: @bug.title
     click_on "Create Bug"
 
     assert_text "Bug was successfully created"
@@ -29,11 +29,11 @@ class BugsTest < ApplicationSystemTestCase
     visit bugs_url
     click_on "Edit", match: :first
 
-    fill_in "Description", with: @bug.Description
-    fill_in "Issue type", with: @bug.Issue_type
-    fill_in "Priority", with: @bug.Priority
-    fill_in "Status", with: @bug.Status
-    fill_in "Title", with: @bug.Title
+    fill_in "Description", with: @bug.description
+    fill_in "Issue type", with: @bug.issue_type
+    fill_in "Priority", with: @bug.priority
+    fill_in "Status", with: @bug.status
+    fill_in "Title", with: @bug.title
     click_on "Update Bug"
 
     assert_text "Bug was successfully updated"

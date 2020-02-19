@@ -11,37 +11,35 @@
     </div>
   <% end %>
 
-   <div class="field">
+  <div class="field">
     <%= form.label :user %>
-    <%= form.select :user, options_for_select(User.all.collect {|a| ["#{a.lname}, #{a.fname}", a.id]},
+    <%= form.select :user_id, options_for_select(User.all.collect {|a| ["#{a.lname}, #{a.fname}", a.id]},
 	 		selected: (@bug.user ? @bug.user.id : User.first.id)), {} %>
   </div>
 
-
-
   <div class="field">
-    <%= form.label :Title %>
-    <%= form.text_field :Title %>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
   </div>
 
   <div class="field">
-    <%= form.label :Description %>
-    <%= form.text_area :Description %>
+    <%= form.label :description %>
+    <%= form.text_area :description %>
   </div>
 
   <div class="field">
-    <%= form.label :Issue_type %>
-    <%= form.select :Issue_type, @issues.keys, selected: @bug.Issue_type %>
+    <%= form.label :issue_type %>
+    <%= form.select :issue_type, Bug.issue_types.keys, selected: @bug.issue_type %>
   </div>
 
   <div class="field">
-    <%= form.label :Priority %>
-    <%= form.select :Priority, @priorities.keys, selected: @bug.Priority %>
+    <%= form.label :priority %>
+    <%= form.select :priority, Bug.priorities.keys, selected: @bug.priority %>
   </div>
 
   <div class="field">
-    <%= form.label :Status %>
-    <%= form.select :Status, @statuses.keys, selected: @bug.Status %>
+    <%= form.label :status %>
+    <%= form.select :status, Bug.statuses.keys, selected: @bug.status %>
   </div>
 
   <div class="actions">
