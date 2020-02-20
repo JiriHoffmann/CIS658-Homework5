@@ -28,10 +28,10 @@
           <td class="w-10"><%= bug.priority %></td>
           <td class="w-10"><%= bug.status %></td>
           <td class="w-25">
-            <%= link_to bug, class: "btn btn-default btn-sm" do %>
+            <%= link_to bug, class: "btn btn-outline-primary btn-sm" do %>
             Show
             <% end %>
-            <%= link_to edit_bug_path(bug), class: "btn btn-default btn-sm" do %>
+            <%= link_to edit_bug_path(bug), class: "btn btn-outline-primary btn-sm" do %>
             Edit
             <% end %>
             <%= link_to bug, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-sm" do %>
