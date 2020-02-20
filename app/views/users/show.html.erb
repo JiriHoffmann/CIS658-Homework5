@@ -1,5 +1,8 @@
-<p id="notice"><%= notice %></p>
+<% if !notice.blank? %>
+	<p id="notice" class="alert alert-success"><%= notice %></p>
+<% end %>
 
+<div class="container">
 <p>
   <strong>Lname:</strong>
   <%= @user.lname %>
@@ -22,3 +25,4 @@
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
+</div>
