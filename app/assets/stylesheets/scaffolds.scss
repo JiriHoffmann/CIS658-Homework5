@@ -1,4 +1,19 @@
 body {
+  margin-bottom: 20px;
+  background-color: #f8f9fa!important;
+}
+
+jumbotron {
+  border-radius: 0px!important;
+}
+
+a {
+  text-decoration: none!important; /* no underline */
+}
+
+
+/*
+body {
   background-color: #fff;
   color: #333;
   margin: 33px; }
@@ -63,3 +78,4 @@ div.actions {
 
 label {
   display: block; }
+*/
