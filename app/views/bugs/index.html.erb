@@ -23,7 +23,7 @@
         <tr>
           <td class="w-15"><%= "#{bug.user.fname} #{bug.user.lname}" %></td>
           <td class="w-15"><%= bug.title %></td>
-          <td class="w-25"><%= bug.description %></td>
+          <td class="w-25"><%= bug.description.truncate_words(10) %></td>
           <td class="w-10"><%= bug.issue_type %></td>
           <td class="w-10"><%= bug.priority %></td>
           <td class="w-10"><%= bug.status %></td>
