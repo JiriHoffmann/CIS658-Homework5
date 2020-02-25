@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
     def index
-        @bugs = Bug.last(3)
+        @bugs = Bug.last(3).reverse
     end
 end

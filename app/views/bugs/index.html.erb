@@ -1,21 +1,21 @@
 
 <% if !notice.blank? %>
-	<p id="notice" class="alert alert-success"><%= notice %></p>
+	<p id="notice" class="alerSt alert-success"><%= notice %></p>
 <% end %>
 
-<div class="container">
+<div class="container" id='bugIndex'>
   <h1>Bugs</h1>
 
   <table class="table table-hover">
     <thead>
       <tr>
-        <th class="w-15">User</th>
-        <th class="w-15">Title</th>
-        <th class="w-25">Description</th>
-        <th class="w-10">Issue</th>
-        <th class="w-10">Priority</th>
-        <th class="w-10">Status</th>
-         <th class="w-25">Actions</th>
+        <th class="w-15" id='userButton'>User</th>
+        <th class="w-15" id='titleButton'>Title</th>
+        <th class="w-25" id='descriptionButton'>Description</th>
+        <th class="w-10" id='issueButton'>Issue</th>
+        <th class="w-10" id='priorityButton'>Priority</th>
+        <th class="w-10" id='statusButton'>Status</th>
+         <th class="w-25" id='actionsButton'>Actions</th>
         </tr>
       </thead>
       <tbody>

@@ -1,6 +1,6 @@
 
 
-  <%= form_with(model: bug, local: true) do |form| %>
+  <%= form_with(model: bug, local: true, id: 'bugForm') do |form| %>
     <% if bug.errors.any? %>
       <div id="error_explanation" class="alert alert-danger">
         <strong><%= pluralize(bug.errors.count, "error") %> prohibited this user from being saved:</strong>
@@ -21,11 +21,13 @@
     <div class="form-group">
       <%= form.label :title %>
       <%= form.text_field :title, class: "form-control" %>
+      <div id='titleError' class="alert alert-danger invisible" > T</div>
     </div>
       
     <div class="form-group">
       <%= form.label :description %>
       <%= form.text_area :description, class: "form-control" %>
+      <div id='descriptionError' class="alert alert-danger invisible"> T</div>
     </div>
       
     <div class="form-group">
@@ -37,12 +39,12 @@
       <%= form.select :priority, Bug.priorities.keys, selected: @bug.priority, class: "form-control" %>
     </div>
     <div class="form-group">
-  <%= form.label :status %>
+    <%= form.label :status %>
       <%= form.select :status, Bug.statuses.keys, selected: @bug.status, class: "form-control" %>
     </div>
       
     <div class="actions">
-      <%= form.submit class: "btn btn-primary" %>
+     <%= form.submit data: {disable_with: false}, class: "btn btn-primary" %>
       <%= link_to 'Cancel', bugs_path, class: "btn btn-danger" %>
     </div>
   <% end %>
