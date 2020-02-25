@@ -15,7 +15,7 @@
         <th class="w-10" id='issueButton'>Issue</th>
         <th class="w-10" id='priorityButton'>Priority</th>
         <th class="w-10" id='statusButton'>Status</th>
-         <th class="w-25" id='actionsButton'>Actions</th>
+         <th class="w-25">Actions</th>
         </tr>
       </thead>
       <tbody>
@@ -45,3 +45,5 @@
     <br/>
     <%= link_to 'New Bug', new_bug_path, :class => "btn btn-primary" %>
 </div>
+
+<%= javascript_pack_tag 'sortBugs', 'data-turbolinks-track': 'reload' %>
