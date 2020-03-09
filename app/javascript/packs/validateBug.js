@@ -5,7 +5,7 @@ form.addEventListener("submit", event => {
   titleError.textContent = "";
   let titleText = document.getElementsByName("bug[title]")[0].value;
   let descriptionText = document.getElementsByName("bug[description]")[0].value;
-  if (titleText.length < 10) {
+  if (titleText.length < 5) {
     titleError.innerHTML = "Title is not long enough.";
     titleError.classList.remove("invisible");
     event.preventDefault();
